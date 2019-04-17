@@ -77,6 +77,8 @@ fn print_entry_colorized(
 
     if config.null_separator {
         write!(stdout, "\0")
+    } else if config.space_separator {
+        write!(stdout, " ")
     } else {
         writeln!(stdout)
     }

@@ -31,6 +31,9 @@ pub struct FdOptions {
     /// Whether elements of output should be separated by a null character
     pub null_separator: bool,
 
+    /// Whether elements of output should be separated by a space character
+    pub space_separator: bool,
+
     /// The maximum search depth, or `None` if no maximum search depth should be set.
     ///
     /// A depth of `1` includes all files under the current directory, a depth of `2` also includes

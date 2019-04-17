@@ -77,6 +77,7 @@ pub fn build_app() -> App<'static, 'static> {
         .arg(arg("follow").long("follow").short("L").alias("dereference"))
         .arg(arg("full-path").long("full-path").short("p"))
         .arg(arg("null_separator").long("print0").short("0"))
+        .arg(arg("space_separator").long("prints"))
         .arg(arg("depth").long("max-depth").short("d").takes_value(true))
         // support --maxdepth as well, for compatibility with rg
         .arg(
@@ -261,6 +262,10 @@ fn usage() -> HashMap<&'static str, Help> {
         , "Separate results by the null character"
         , "Separate search results by the null character (instead of newlines). Useful for \
            piping results to 'xargs'.");
+    doc!(h, "space_separator"
+        , "Separate results by a single space character"
+        , "Separate search rsults by the space character (instad of newlines). Useful for \
+           providing the results as arguments to another command.");
     doc!(h, "depth"
         , "Set maximum search depth (default: none)"
         , "Limit the directory traversal to a given depth. By default, there is no limit \

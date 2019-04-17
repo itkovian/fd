@@ -175,6 +175,7 @@ fn main() {
             || matches.is_present("no-ignore-vcs")),
         follow_links: matches.is_present("follow"),
         null_separator: matches.is_present("null_separator"),
+        space_separator: matches.is_present("space_separator"),
         max_depth: matches
             .value_of("depth")
             .or_else(|| matches.value_of("rg-depth"))
